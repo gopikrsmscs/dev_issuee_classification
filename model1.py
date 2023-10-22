@@ -4,7 +4,7 @@ import pandas as pd
 from sentence_transformers import SentenceTransformer, InputExample, losses
 from torch.utils.data import DataLoader
 from datasets import load_dataset
-
+import pinecone
 
 embedder = SentenceTransformer('all-mpnet-base-v2')
 
@@ -23,9 +23,9 @@ for row in dataset_dict:
     #body = row['Body']
     examples.append(title)
 
-file_paths = 'saved_corpus_list.txt'
-torch.save(examples,file_paths)
-corpus_embeddings = embedder.encode(examples, convert_to_tensor=True)
+file_paths = 'saved_corpus.txt'
+torch.save(examples[0:1000],file_paths)
+corpus_embeddings = embedder.encode(examples[0:1000], convert_to_tensor=True)
 file_path = 'saved_corpus.pt'
 
 # Save the tensor to the file

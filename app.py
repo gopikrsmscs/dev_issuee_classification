@@ -5,7 +5,7 @@ from datasets import load_dataset
 from sentence_transformers import SentenceTransformer, util
 
 embedder = SentenceTransformer('all-mpnet-base-v2')
-st.title("iSeBetter") 
+st.title("iSeBetter : Semantic Transfomer.") 
   
 message = st.text_area("Issue details in the text area.") 
   
