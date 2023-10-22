@@ -1,5 +1,5 @@
 ---
-title: SmartCluster
+title: iSeBetter
 emoji: 👩🏽‍💻
 colorFrom: purple
 colorTo: blue
