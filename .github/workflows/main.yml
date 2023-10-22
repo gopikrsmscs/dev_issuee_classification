@@ -17,4 +17,4 @@ jobs:
       - name: Push to hub
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: git push https://gopikrsmscs:$HF_TOKEN@huggingface.co/spaces/gopikrsmscs/smartcluster main
+        run: git push --force https://gopikrsmscs:$HF_TOKEN@huggingface.co/spaces/gopikrsmscs/smartcluster main
